@@ -7,6 +7,8 @@ interface IProps {
   subTitle: string;
   customClass?: string;
   id: string;
+  descAlignment?: string;
+  headerAlignment?: string;
 }
 function SectionLayout({
   children,
@@ -15,16 +17,20 @@ function SectionLayout({
   description,
   coloredTitle,
   customClass,
+  descAlignment = "",
+  headerAlignment = "",
   id,
 }: IProps) {
   return (
     <section id={id} className={`app-container pb-24 ${customClass || ""}`}>
-      <div className="flex flex-col gap-2 justify-center items-center">
+      <div className={`section-header-texts ${headerAlignment}`}>
         <span className="text-sm text-secondary font-medium">{subTitle}</span>
         <h2 className="section-header  leading-12 capitalize space-x-3">
           {title} <span className="gradient-text">{coloredTitle}</span>
         </h2>
-        <p className="w-full text-center text-md leading-6">{description}</p>
+        <p className={`w-full text-center text-sm leading-6 ${descAlignment}`}>
+          {description}
+        </p>
       </div>
       {children}
     </section>
