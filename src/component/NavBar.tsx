@@ -22,14 +22,18 @@ function NavBar() {
   }, []);
   return (
     <nav
-      className={`${!AlphaWhiteHeader ? "bg-white/90" : "bg-white/75 backdrop-blur-md"} shadow-sm sticky top-0 w-full z-50`}
+      className={`${!AlphaWhiteHeader ? "bg-white/90" : "bg-white/80 backdrop-blur-md"} shadow-sm sticky top-0 w-full z-50`}
     >
       <div className="app-container flex justify-between items-center h-16">
         <h1 className="gradient-text text-2xl font-bold">AI Revolution</h1>
         <div className="hidden md:flex justify-between gap-4">
           {links.map((link) => {
             return (
-              <a href={link.href} key={link.href} className="nav-item">
+              <a
+                href={link.href}
+                key={link.href}
+                className={`nav-item${AlphaWhiteHeader ? " text-dark" : ""}`}
+              >
                 {link.name}
               </a>
             );

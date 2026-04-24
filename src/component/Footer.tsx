@@ -35,11 +35,7 @@ function Footer() {
               news.
             </p>
             <div className="flex gap-2 items-center">
-              <input
-                type="text"
-                placeholder="Email"
-                className="ring-2 outline-0 px-4 py-2 rounded-md hover:ring-primary/80 ring-primary/10 bg-white/10"
-              />
+              <input type="text" placeholder="Email" className="footer-input" />
               <button className="footer-newsletter-btn">Subscribe</button>
             </div>
           </div>
