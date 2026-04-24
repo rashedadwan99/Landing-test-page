@@ -9,14 +9,11 @@ interface Links {
 }
 function FooterLinks({ title, links }: IProps) {
   return (
-    <div className="flex flex-col gap-4 text-md capitalize">
-      <h3 className="font-bold text-lg ">{title}</h3>
+    <div className="footer-link-list">
+      <h3 className="footer-title">{title}</h3>
       {links.map((link) => {
         return (
-          <a
-            className="flex gap-1 items-center cursor-pointer text-xs text-light/50 hover:text-light/80 transition-all "
-            key={link.text}
-          >
+          <a className="footer-link" key={link.text}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

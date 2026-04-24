@@ -18,10 +18,11 @@
    Base Styles
 ================================ */
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
 
   body {
     @apply bg-gray-50 text-dark font-sans antialiased;
@@ -36,6 +37,8 @@
    Components
 ================================ */
 @layer components {
+
+
 
   /* ---------- Buttons ---------- */
   .btn-primary {
@@ -146,6 +149,10 @@
     @apply bg-gradient-to-b from-dark to-gray-900 text-white pt-16 pb-8;
   }
 
+  .footer-first-section {
+    @apply flex flex-col gap-4
+  }
+
   .footer-description {
     @apply text-gray-400 leading-relaxed;
   }
@@ -154,17 +161,26 @@
     @apply text-gray-400 hover:text-white transition hover:-translate-y-1;
   }
 
+  .footer-p {
+    @apply text-light/60 text-sm
+  }
+
+  .footer-newsletter {
+    @apply flex flex-col gap-6
+  }
+
   .footer-title {
-    @apply text-lg font-semibold text-white;
+    @apply font-bold capitalize text-lg
   }
 
   .footer-link-list {
-    @apply mt-6 space-y-3;
+    @apply flex flex-col gap-4 text-sm capitalize
   }
 
   .footer-link {
-    @apply text-gray-400 hover:text-primary transition flex items-center;
+    @apply flex gap-1 items-center cursor-pointer text-xs text-light/50 hover:text-light/80 transition-all
   }
+
 
   .footer-newsletter-input {
     @apply px-4 py-2 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
@@ -184,6 +200,10 @@
 
   .footer-bottom-bar {
     @apply border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center;
+  }
+
+  .footer-social-links {
+    @apply flex gap-3 items-center
   }
 
   .footer-bottom-text {

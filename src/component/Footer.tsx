@@ -1,5 +1,6 @@
 import React from "react";
 import FooterLinks from "./FooterLinks";
+import FooterFirstSection from "./FooterFirstSection";
 interface Links {
   text: string;
   href: string;
@@ -22,14 +23,27 @@ const resources: Links[] = [
 function Footer() {
   return (
     <footer className="bg-dark mt-8 py-12">
-      <div className="app-container grid grid-cols-1 sm:grid-cols-3 text-light">
-        <div className="flex flex-col gap-4">
-          <h1 className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent text-2xl font-bold">
-            AI Revolution
-          </h1>
-        </div>
+      <div className="app-container gap-4 sm:gap-2 sm:gap-y-10  grid grid-cols-1 sm:grid-cols-3 text-light">
+        <FooterFirstSection />
         <FooterLinks title="explore" links={quickLinks} />
         <FooterLinks title="Resources" links={resources} />
+        <div className="footer-newsletter">
+          <h3 className="footer-title ">stay updated</h3>
+          <div className="flex flex-col gap-4">
+            <p className="footer-p">
+              Subscribe to our newsletter for the latest AI insights and company
+              news.
+            </p>
+            <div className="flex gap-2 items-center">
+              <input
+                type="text"
+                placeholder="Email"
+                className="ring-2 outline-0 px-4 py-2 rounded-md hover:ring-primary/80 ring-primary/10 bg-white/10"
+              />
+              <button className="footer-newsletter-btn">Subscribe</button>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
