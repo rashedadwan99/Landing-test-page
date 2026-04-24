@@ -13,7 +13,7 @@ function Home() {
         <HeroSection />
         <AiTypes />
         <AiBenefits />
-        <Contact />
+        {/* <Contact /> */}
       </main>
       <Footer />
     </>
