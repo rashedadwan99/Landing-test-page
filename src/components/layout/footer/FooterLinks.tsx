@@ -1,12 +1,9 @@
-import React from "react";
-interface IProps {
+import { Link } from "./types/link.type";
+
+type IProps = {
   title: string;
-  links: Links[];
-}
-interface Links {
-  text: string;
-  href: string;
-}
+  links: Link[];
+};
 function FooterLinks({ title, links }: IProps) {
   return (
     <div className="footer-link-list">

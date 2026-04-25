@@ -1,21 +1,23 @@
 import React from "react";
-import SectionLayout from "./SectionLayout";
+import SectionLayout from "../layout/section/SectionLayout";
 type TagColor = "primary" | "secondary" | "accent";
-interface Tags {
+type Tag = {
   text: string;
   color: TagColor;
-}
-interface AiTypes {
+};
+type AiType = {
   title: string;
   description: string;
   image: string;
   icon: React.ReactNode;
-  tags: Tags[];
-}
+  tags: Tag[];
+};
+type AiTypes = AiType[];
+type Tags = Tags[];
 type CTags = {
   [K in TagColor]: string;
 };
-const aiTypes: AiTypes[] = [
+const aiTypes: AiTypes = [
   {
     title: "Machine Learning",
     description:

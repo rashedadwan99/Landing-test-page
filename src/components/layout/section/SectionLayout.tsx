@@ -1,15 +1,5 @@
-import React from "react";
-interface IProps {
-  children?: React.ReactNode;
-  title: string;
-  coloredTitle: string;
-  description: string;
-  subTitle: string;
-  customClass?: string;
-  id: string;
-  descAlignment?: string;
-  headerAlignment?: string;
-}
+import { SectionProps } from "./types/section.types";
+
 function SectionLayout({
   children,
   subTitle,
@@ -20,7 +10,7 @@ function SectionLayout({
   descAlignment = "",
   headerAlignment = "",
   id,
-}: IProps) {
+}: SectionProps) {
   return (
     <section id={id} className={`app-container pb-24 ${customClass || ""}`}>
       <div className={`section-header-texts ${headerAlignment}`}>
