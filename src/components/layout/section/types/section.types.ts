@@ -1,4 +1,4 @@
-export type SectionProps {
+export type SectionProps = {
   children?: React.ReactNode;
   title: string;
   coloredTitle: string;
@@ -8,4 +8,4 @@ export type SectionProps {
   id: string;
   descAlignment?: string;
   headerAlignment?: string;
-}
+};
