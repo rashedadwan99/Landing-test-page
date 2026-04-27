@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import RightSideHeader from "./components/RightSideHeader";
 import MobileHeader from "./components/MobileHeader";
+import ReducerHook from "@/ReducerHook";
 
 function NavBar() {
   const [showMobile, setShowMobile] = useState(false);

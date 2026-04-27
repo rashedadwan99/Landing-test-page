@@ -2,7 +2,7 @@ type Classes = "primary" | "secondary" | "accent";
 export type Benefits = {
   title: string;
   description: string;
-  icon: React.ElementType;
+  icon: React.ComponentType;
   color: Classes;
 };
 type ColorClasses = {

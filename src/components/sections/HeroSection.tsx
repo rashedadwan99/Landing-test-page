@@ -1,9 +1,12 @@
+import { memo } from "react";
+
 const images = [
   "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=60",
   "https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=600&auto=format&fit=crop&q=60",
   "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&auto=format&fit=crop&q=60",
 ];
 function HeroSection() {
+  console.log("hi");
   return (
     <section id="home" className="app-container pt-12 pb-24 overflow-hidden sm">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-center items-center">
@@ -24,8 +27,10 @@ function HeroSection() {
           </div>
           <div className="flex items-center justify-between  gap-4">
             <div className="flex justify-start max-w-30">
-              {images.map((img) => {
-                return <img className="avatar" src={img} alt="avatar" />;
+              {images.map((img, i) => {
+                return (
+                  <img className="avatar" src={img} alt="avatar" key={i} />
+                );
               })}
             </div>
             <span className="text-xs capitalize sm:text-sm ">
@@ -47,4 +52,4 @@ function HeroSection() {
   );
 }
 
-export default HeroSection;
+export default memo(HeroSection);
