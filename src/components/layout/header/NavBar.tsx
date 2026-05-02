@@ -23,11 +23,11 @@ function NavBar() {
       <div className="app-container flex justify-between items-center h-16">
         <h1 className="gradient-text text-2xl font-bold">AI Revolution</h1>
         <RightSideHeader AlphaWhiteHeader={AlphaWhiteHeader} />
-      </div>
       <MobileHeader
         showMobile={showMobile}
         setShowMobile={() => setShowMobile((prev) => !prev)}
       />
+      </div>
     </nav>
   );
 }
