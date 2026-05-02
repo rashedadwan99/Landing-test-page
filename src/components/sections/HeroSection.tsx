@@ -6,7 +6,6 @@ const images = [
   "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&auto=format&fit=crop&q=60",
 ];
 function HeroSection() {
-  console.log("hi");
   return (
     <section id="home" className="app-container pt-12 pb-24 overflow-hidden sm">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-center items-center">
